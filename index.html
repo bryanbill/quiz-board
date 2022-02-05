@@ -35,18 +35,18 @@
           <div class="flex-column justify-evenly align-start">
             <p class="title">What is the short form of HTML?</p>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
+              <input type="checkbox" name="answer" value="HTML" checked /><label
                 >HTML</label
               >
             </div>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
+              <input type="checkbox" name="answer" value="HTML" /><label
+                >HMLT</label
               >
             </div>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
+              <input type="checkbox" name="answer" value="HTML" /><label
+                >MLHT</label
               >
             </div>
           </div>
@@ -66,18 +66,16 @@
           <div class="flex-column justify-evenly align-start">
             <p class="title">What is the short form of HTML?</p>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
+              <input type="checkbox" name="answer" value="HTML" /><label
+                >ECMAscript</label
               >
             </div>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
-              >
+              <input type="checkbox" name="answer" value="HTML" /><label>JS</label>
             </div>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
+              <input type="checkbox" name="answer" value="HTML" /><label
+                >I don't know</label
               >
             </div>
           </div>
@@ -95,25 +93,26 @@
       <div id="quiz" class="m-2 quiz-container blue-grey">
         <div class="wrapper">
           <div class="flex-column justify-evenly align-start">
-            <p class="title">What is the short form of HTML?</p>
+            <p class="title">Is C++ a low level language?</p>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
-              >
+              <input
+                type="checkbox"
+                id="q3-ans1"
+                name="answer"
+                value="HTML"
+              /><label>Yes</label>
             </div>
             <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
-              >
-            </div>
-            <div class="answer flex w-10 justify-between">
-              <input type="radio" name="answer" value="HTML" /><label
-                >HTML</label
-              >
+              <input
+                type="checkbox"
+                id="q3-ans2"
+                name="answer"
+                value="HTML"
+              /><label>No</label>
             </div>
           </div>
         </div>
-        <div class="text-right mr-10px">
+        <div id="q3-ans" class="text-right mr-10px">
           <img
             class="tick"
             src="./assets/tick.png"
@@ -124,8 +123,8 @@
         </div>
       </div>
       <div class="flex justify-between buttons">
-        <button class="btn btn-neutral">Reset</button>
-        <button class="btn">Submit</button>
+        <button id="reset" class="btn btn-neutral">Reset</button>
+        <button id="submit" class="btn">Submit</button>
       </div>
     </div>
   </body>

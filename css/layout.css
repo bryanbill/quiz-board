@@ -58,13 +58,18 @@ body {
   margin-top: 1%;
 }
 
-input[type="radio"],
-input[type="radio"]:checked {
+input[type="checkbox"],
+input[type="checkbox"]:checked {
   border: 2px solid #5aa6ec;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
-input[type="radio"]:checked {
+input[type="checkbox"]:checked {
   background-color: #5aa6ec;
   color: #5aa6ec;
 }
+
+.tick {
+  display: none;
+}
+
