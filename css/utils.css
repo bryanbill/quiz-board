@@ -16,4 +16,41 @@
   .nowrap {
     flex-wrap: nowrap;
   }
+  /* Colors */
+.blue-grey {
+    background-color: #ebedf2;
+  }
+  
+  .blue {
+    background-color: #5aa6ec;
+  }
+  
+  /* Spacing */
+  
+  .justify-around {
+    justify-content: space-around;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  
+  /* Alignments */
+  .align-center {
+    align-items: center;
+  }
+  .align-end {
+    align-items: flex-end;
+  }
+  .align-start {
+    align-items: flex-start;
+  }
   
