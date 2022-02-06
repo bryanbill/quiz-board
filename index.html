@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/utils.css" />
     <link rel="stylesheet" href="./css/layout.css" />
+
     <title>Quiz Board</title>
   </head>
   <body>
@@ -23,198 +24,15 @@
           </div>
         </div>
       </nav>
-      <div class="m-2 w-100 flex align-center justify-end">
-        <div class="m-2">
-          <span>A</span>
-          <span>|</span>
-          <span>20/30</span>
+      <div class="flex justify-end m-2">
+        <div class="placeholder"></div>
+        <div class="w-10 flex ">
+          <div id="correctCount">0</div>
+          <div>|</div>
+          <div id="numberOfQuestions">5</div>
         </div>
       </div>
-      <form class="form" action="#">
-        <div id="quiz" class="m-2 quiz-container blue-grey">
-          <div class="wrapper">
-            <div class="flex-column justify-evenly align-start">
-              <p class="title">What is the short form of HTML?</p>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q1-ans1"
-                  name="answer"
-                  value="HTML"
-                  checked
-                /><label>HTML</label>
-              </div>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q1-ans2"
-                  name="answer"
-                  value="HTML"
-                /><label>HMLT</label>
-              </div>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q1-ans3"
-                  name="answer"
-                  value="HTML"
-                  required
-                /><label>MLHT</label>
-              </div>
-            </div>
-          </div>
-          <div class="text-right mr-10px">
-            <img
-              class="tick"
-              src="./assets/tick.png"
-              alt="tick"
-              id="q1-tick"
-              height="20"
-              width="20"
-            />
-          </div>
-        </div>
-        <div id="quiz" class="m-2 quiz-container blue-grey">
-          <div class="wrapper">
-            <div class="flex-column justify-evenly align-start">
-              <p class="title">What is the short form of HTML?</p>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q2-ans1"
-                  name="answer"
-                  value="HTML"
-                /><label>ECMAscript</label>
-              </div>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q2-ans2"
-                  name="answer"
-                  value="HTML"
-                /><label>JS</label>
-              </div>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q2-ans3"
-                  name="answer"
-                  value="HTML"
-                /><label>I don't know</label>
-              </div>
-            </div>
-          </div>
-          <div class="text-right mr-10px">
-            <img
-              class="tick"
-              src="./assets/tick.png"
-              alt="tick"
-              id="q2-tick"
-              height="20"
-              width="20"
-            />
-          </div>
-        </div>
-        <div id="quiz" class="m-2 quiz-container blue-grey">
-          <div class="wrapper">
-            <div class="flex-column justify-evenly align-start">
-              <p class="title">Is C++ a low level language?</p>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q3-ans1"
-                  name="answer"
-                  value="HTML"
-                /><label>Yes</label>
-              </div>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q3-ans2"
-                  name="answer"
-                  value="HTML"
-                /><label>No</label>
-              </div>
-            </div>
-          </div>
-          <div id="q3-ans" class="text-right mr-10px">
-            <img
-              class="tick"
-              src="./assets/tick.png"
-              alt="tick"
-              id="q3-tick"
-              height="20"
-              width="20"
-            />
-          </div>
-        </div>
-        <div id="quiz" class="m-2 quiz-container blue-grey">
-          <div class="wrapper">
-            <div class="flex-column justify-evenly align-start">
-              <p class="title">Is C++ a low level language?</p>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q4-ans1"
-                  name="answer"
-                  value="HTML"
-                /><label>Yes</label>
-              </div>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q4-ans2"
-                  name="answer"
-                  value="HTML"
-                /><label>No</label>
-              </div>
-            </div>
-          </div>
-          <div id="q4-ans" class="text-right mr-10px">
-            <img
-              class="tick"
-              src="./assets/tick.png"
-              alt="tick"
-              id="q5-tick"
-              height="20"
-              width="20"
-            />
-          </div>
-        </div>
-        <div id="quiz" class="m-2 quiz-container blue-grey">
-          <div class="wrapper">
-            <div class="flex-column justify-evenly align-start">
-              <p class="title">Is C++ a low level language?</p>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q5-ans1"
-                  name="answer"
-                  value="HTML"
-                /><label>Yes</label>
-              </div>
-              <div class="answer flex w-10 justify-between">
-                <input
-                  type="checkbox"
-                  id="q5-ans2"
-                  name="answer"
-                  value="HTML"
-                /><label>No</label>
-              </div>
-            </div>
-          </div>
-          <div id="q5-ans" class="text-right mr-10px">
-            <img
-              class="tick"
-              src="./assets/tick.png"
-              alt="tick"
-              id="q5-tick"
-              height="20"
-              width="20"
-            />
-          </div>
-        </div>
-      </form>
+      <form id="quiz-container" action="#"></form>
       <div class="flex justify-between buttons">
         <button
           type="reset"
@@ -224,10 +42,11 @@
         >
           Reset
         </button>
-        <button type="submit" onclick="submit()" id="submit" class="btn">
+        <button type="submit" onclick="check()" id="submit" class="btn">
           Submit
         </button>
       </div>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>

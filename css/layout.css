@@ -56,6 +56,7 @@ body {
 
 .answer {
   margin-top: 1%;
+  display: block;
 }
 
 input[type="checkbox"],
@@ -72,4 +73,6 @@ input[type="checkbox"]:checked {
 .tick {
   display: none;
 }
+
+
 
