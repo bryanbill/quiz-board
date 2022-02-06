@@ -52,7 +52,56 @@ let questions = [
  * @returns void
  */
 
-function check() {}
+function check() {
+  // Hold correct scores
+  let numCorrect = 0;
+
+  // Get the answers from the DOM
+  const answers = div.querySelectorAll(".answers");
+
+  questions.forEach((question, index) => {
+    // find selected answer
+    const answer = answers[index];
+    const selector = `input[name=${"q" + index}]:checked`;
+    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+    const c = document.getElementsByName("quiz");
+
+    // if answer is correct
+    if (userAnswer === question.correctAnswer) {
+      // add to the number of correct answers
+      numCorrect++;
+
+      c[
+        index
+      ].innerHTML = `${c[index].innerHTML}  <div class="text-right mr-10px ">
+      <img
+        src="./assets/tick.png"
+        alt="tick"
+        id=${index}-tick,
+        height="20"
+        width="20"
+      />
+    </div>`;
+    }
+    // if answer is wrong or blank
+    else {
+      c[
+        index
+      ].innerHTML = `${c[index].innerHTML}  <div class="text-right mr-10px ">
+      <img
+        src="./assets/wrong.png"
+        alt="tick"
+        id=${index}-tick,
+        height="20"
+        width="20"
+      />
+    </div>`;
+    }
+  });
+
+  // show number of correct answers out of total
+  document.getElementById("correctCount").innerHTML = numCorrect;
+}
 
 /**
  * Resets the questions and answers in the DOM
