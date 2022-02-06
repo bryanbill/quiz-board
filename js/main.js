@@ -58,6 +58,7 @@ function check() {
   // Hold correct scores
   let numCorrect = 0;
 
+
   // Get the answers from the DOM
   const answers = div.querySelectorAll(".answers");
 
@@ -103,6 +104,19 @@ function check() {
 
   // show number of correct answers out of total
   document.getElementById("correctCount").innerHTML = numCorrect;
+
+  // Check if user passed or failed
+  const percentage = Math.floor((numCorrect / questions.length) * 100);
+  if (percentage >= 80) {
+   document.getElementById("status").innerHTML = `<h1 class="text-center">Congratulations! You passed the quiz!</h1>`;
+  }
+  else if (percentage >= 50) {
+    document.getElementById("status").innerHTML = "You fairly Passed";
+  }
+  else {
+    document.getElementById("status").innerHTML = "You Failed";
+  }
+
 
 }
 

@@ -73,6 +73,13 @@ input[type="radio"]:checked {
 .tick {
   display: none;
 }
-
-
-
+.brand {
+  font-size: 2em;
+  color: #5aa6ec;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.username {
+  font-size: 1.5em;
+  color: #000;
+}
