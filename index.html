@@ -1,52 +1,45 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/utils.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
 
-    <title>Quiz Board</title>
-  </head>
-  <body>
-    <div class="container">
-      <nav class="flex h-10 justify-between m-2">
-        <div class="brand">Quiz Board</div>
-        <div class="flex profile justify-around w-20 nowrap">
-          <div class="name">John Doe</div>
-          <div class="avatar h-10">
-            <img
-              src="https://images.unsplash.com/photo-1643985309199-b7190f3f4713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt="avatar"
-              height="50"
-              width="50"
-            />
-          </div>
-        </div>
-      </nav>
-      <div class="flex justify-end m-2">
-        <div class="placeholder"></div>
-        <div class="w-10 flex ">
-          <div id="correctCount">0</div>
-          <div>|</div>
-          <div id="numberOfQuestions">5</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/utils.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+
+  <title>Quiz Board</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="flex h-10 justify-between m-2">
+      <div class="brand">Quiz Board</div>
+      <div class="flex profile justify-around w-20 nowrap">
+        <div class="name" id="username"></div>
+        <div class="avatar h-10" id="avatar">
+
         </div>
       </div>
-      <form id="quiz-container" action="#"></form>
-      <div class="flex justify-between buttons">
-        <button
-          type="reset"
-          onclick="reset()"
-          id="reset"
-          class="btn btn-neutral"
-        >
-          Reset
-        </button>
-        <button type="submit" onclick="check()" id="submit" class="btn">
-          Submit
-        </button>
+    </nav>
+    <div class="flex justify-end m-2">
+      <div class="placeholder"></div>
+      <div class="w-10 flex " id="">
+        <div id="correctCount">0</div>
+        <div>off</div>
+        <div id="numberOfQuestions">5</div>
       </div>
     </div>
-    <script src="./js/main.js"></script>
-  </body>
+    <form id="quiz-container" action="#"></form>
+    <div class="flex justify-between buttons">
+      <button type="reset" onclick="reset()" id="reset" class="btn btn-neutral">
+        Reset
+      </button>
+      <button type="submit" onclick="check()" id="submit" class="btn">
+        Submit
+      </button>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

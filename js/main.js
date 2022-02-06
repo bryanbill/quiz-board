@@ -1,3 +1,5 @@
+const div = document.getElementById("quiz-container");
+
 let questions = [
   {
     question: "What is the capital of India?",
@@ -63,7 +65,7 @@ function check() {
     // find selected answer
     const answer = answers[index];
     const selector = `input[name=${"q" + index}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+    const userAnswer = (answer.querySelector(selector) || {}).value;
     const c = document.getElementsByName("quiz");
 
     // if answer is correct
@@ -101,6 +103,7 @@ function check() {
 
   // show number of correct answers out of total
   document.getElementById("correctCount").innerHTML = numCorrect;
+
 }
 
 /**
@@ -130,7 +133,7 @@ function createQuiz(questions) {
       answers.push(
         `<div class="answer">
         <label> <input
-        type="checkbox"
+        type="radio"
         name="${"q" + index}"
         value="${x}"
        /> ${question.answers[x]}</label>
@@ -157,7 +160,35 @@ function createQuiz(questions) {
   div.innerHTML = injected.join("");
 }
 
+function profile() {
+  // Generate random user profiles
+  let profiles = [
+    {
+      name: "John Doe",
+      age: "25",
+      avatar: "https://i.pravatar.cc/300",
+    },
+    {
+      name: "Jane Doe",
+      age: "25",
+      avatar: "https://i.pravatar.cc/300",
+    },
+    {
+      name: "Minny Doe",
+      age: "25",
+      avatar: "https://i.pravatar.cc/300",
+    }
+  ];
+
+  // Get the profile containers
+  const avatarContainer = document.getElementById("avatar");
+  const nameContainer = document.getElementById("username");
+  const index = Math.floor(Math.random() * profiles.length);
+  avatarContainer.innerHTML = `<img src="${profiles[index].avatar}" alt="avatar" height="40" width="40" />`;
+  nameContainer.innerHTML = `${profiles[index].name}`;
+}
 /**
- * Call the createQuiz function
+ * Call the createQuiz and profile functions
  */
+profile();
 createQuiz(questions);
