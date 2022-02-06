@@ -1,4 +1,4 @@
-const questions = [
+let questions = [
   {
     question: "What is the capital of India?",
     answers: {
@@ -66,7 +66,47 @@ function reset() {
  * Creates the questions and answers in the DOM
  * @param {Array} questions
  */
-function createQuiz(questions) {}
+function createQuiz(questions) {
+  let injected = [];
+  // inject number of questions
+  const numberOfQuestions = questions.length;
+
+  document.getElementById("numberOfQuestions").innerHTML = numberOfQuestions;
+
+  // create questions
+  questions.forEach((question, index) => {
+    let answers = [];
+    for (x in question.answers) {
+      // Push each answer into the answers div
+      answers.push(
+        `<div class="answer">
+        <label> <input
+        type="checkbox"
+        name="${"q" + index}"
+        value="${x}"
+       /> ${question.answers[x]}</label>
+    </div>`
+      );
+    }
+
+    injected.push(
+      `<div id="quiz" name="quiz"class="m-2 quiz-container blue-grey">
+        <div class="wrapper">
+          <div class="flex-column justify-evenly align-start">
+            <p class="title">${question.question}</p>
+
+            <div class="answers">
+            ${answers.join("")}</div>
+          </div>
+        </div>
+       
+      </div>`
+    );
+  });
+
+  // Inject the HTML into the DOM
+  div.innerHTML = injected.join("");
+}
 
 /**
  * Call the createQuiz function
