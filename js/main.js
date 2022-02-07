@@ -15,7 +15,7 @@ const questions = [
     question: "What is the correct syntax for adding a comment in Javascript?",
     answers: {
       a: "// This is a comment",
-      b: "<!-- This is a comment -->",
+      b: "<code><-- This is a comment --></code>",
       c: "'This is a comment",
       d: "**This is a comment**",
     },
