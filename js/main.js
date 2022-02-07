@@ -9,13 +9,13 @@ const questions = [
       c: "script file='main.js'",
       d: "script link='main.js'",
     },
-    correctAnswer: "c",
+    correctAnswer: "a",
   },
   {
     question: "What is the correct syntax for adding a comment in Javascript?",
     answers: {
       a: "// This is a comment",
-      b: "<!-- This is a comment -->",
+      b: "<code><-- This is a comment --></code>",
       c: "'This is a comment",
       d: "**This is a comment**",
     },
@@ -53,54 +53,6 @@ const questions = [
   }
 ]
 
-
-let questions = [
-  {
-    question: "What is ",
-    answers: {
-      a: "New Delhi",
-      b: "Mumbai",
-      c: "Chennai",
-    },
-    correctAnswer: "a",
-  },
-  {
-    question: "What is the capital of Pakistan?",
-    answers: {
-      a: "Islamabad",
-      b: "Karachi",
-      c: "Lahore",
-    },
-    correctAnswer: "b",
-  },
-  {
-    question: "What is the capital of China?",
-    answers: {
-      a: "Beijing",
-      b: "Shanghai",
-      c: "Tianjin",
-    },
-    correctAnswer: "a",
-  },
-  {
-    question: "What is the capital of Russia?",
-    answers: {
-      a: "Moscow",
-      b: "St. Petersburg",
-      c: "Novosibirsk",
-    },
-    correctAnswer: "a",
-  },
-  {
-    question: "What is the capital of France?",
-    answers: {
-      a: "Paris",
-      b: "Lyon",
-      c: "Marseille",
-    },
-    correctAnswer: "a",
-  },
-];
 
 /**
  * Checks for the answers given by a user
