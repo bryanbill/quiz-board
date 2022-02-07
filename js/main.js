@@ -9,7 +9,7 @@ const questions = [
       c: "script file='main.js'",
       d: "script link='main.js'",
     },
-    correctAnswer: "c",
+    correctAnswer: "a",
   },
   {
     question: "What is the correct syntax for adding a comment in Javascript?",
