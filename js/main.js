@@ -1,8 +1,62 @@
 const div = document.getElementById("quiz-container");
+// Create Javascript questions
+const questions = [
+  {
+    question: "What is the correct syntax for referring to an external script called 'main.js'?",
+    answers: {
+      a: "script src='main.js'",
+      b: "script href='main.js'",
+      c: "script file='main.js'",
+      d: "script link='main.js'",
+    },
+    correctAnswer: "c",
+  },
+  {
+    question: "What is the correct syntax for adding a comment in Javascript?",
+    answers: {
+      a: "// This is a comment",
+      b: "<!-- This is a comment -->",
+      c: "'This is a comment",
+      d: "**This is a comment**",
+    },
+    correctAnswer: "a",
+  },
+  {
+    question: "All the following are examples of valid Javascript variable names EXCEPT:",
+    answers: {
+      a: "2names",
+      b: "first_name",
+      c: "variable",
+      d: "variable-one",
+    },
+    correctAnswer: "d",
+  },
+  {
+    question: "Define the correct order of execution for the following code:",
+    answers: {
+      a: "a, b, c",
+      b: "b, a, c",
+      c: "c, a, b",
+      d: "a, c, b",
+    },
+    correctAnswer: "c",
+  },
+  {
+    question: "The following are ways NOT to write an IF statement in Javascript, EXCEPT:",
+    answers: {
+      a: "if (i == 5)",
+      b: "if i == 5",
+      c: "if i = 5",
+      d: "if i = 5 then",
+    },
+    correctAnswer: "a",
+  }
+]
+
 
 let questions = [
   {
-    question: "What is the capital of India?",
+    question: "What is ",
     answers: {
       a: "New Delhi",
       b: "Mumbai",
@@ -108,7 +162,7 @@ function check() {
   // Check if user passed or failed
   const percentage = Math.floor((numCorrect / questions.length) * 100);
   if (percentage >= 80) {
-   document.getElementById("status").innerHTML = `<h1 class="text-center">Congratulations! You passed the quiz!</h1>`;
+    document.getElementById("status").innerHTML = `<h1 class="text-center">Congratulations! You passed the quiz!</h1>`;
   }
   else if (percentage >= 50) {
     document.getElementById("status").innerHTML = "You fairly Passed";
